@@ -38,6 +38,9 @@
         } elseif ($_GET["accion"] == "cancelarCita") {
             $controlador->cancelarCitas($_POST["cancelarDocumento"]);
         }
+        elseif($_GET["accion"] == "ConsultarPaciente"){
+            $controlador->consultarPaciente($_GET["documento"]);
+        }
     } else {
         $controlador->verPagina('Vista/html/inicio.php');
     }
